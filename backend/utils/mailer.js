@@ -9,7 +9,7 @@ export const sendResetEmail = async (to, token) => {
     },
   });
 
-  const resetLink = `http://localhost:5173/reset-password?token=${token}`;
+  const resetLink = `https://bet-test-mu.vercel.app/reset-password?token=${token}`;
 
   await transporter.sendMail({
     from: `"Betting Test" <${process.env.EMAIL}>`,

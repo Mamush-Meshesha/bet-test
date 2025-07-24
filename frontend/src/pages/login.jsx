@@ -34,7 +34,7 @@ const Login = () => {
         email,
         password,
       };
-      const res = await fetch("http://localhost:4000/api/auth/login", {
+      const res = await fetch("https://bet-test-rv5o.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

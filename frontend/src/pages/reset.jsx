@@ -27,7 +27,7 @@ const Reset = () => {
       email,
     };
     try {
-      const res = await fetch("http://localhost:4000/api/auth/request-reset", {
+      const res = await fetch("https://bet-test-rv5o.onrender.com/api/auth/request-reset", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
