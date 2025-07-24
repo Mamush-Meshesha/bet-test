@@ -105,6 +105,9 @@ const Signup = () => {
           onSubmit={handleSubmit}
           buttonLabel="Signup"
           isLoading={isLoading}
+           extraLinks={[
+            { to: "/login", label: "Already have an account? Signin" },
+          ]}
         />
       </AuthLayout>
     </>

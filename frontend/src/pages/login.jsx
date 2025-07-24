@@ -34,13 +34,16 @@ const Login = () => {
         email,
         password,
       };
-      const res = await fetch("https://bet-test-rv5o.onrender.com/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        "https://bet-test-rv5o.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       if (!res.ok) {
         alert(`Registration failed`);
         return;
@@ -81,6 +84,10 @@ const Login = () => {
           onSubmit={handleSubmit}
           buttonLabel="Login"
           isLoading={isLoading}
+          extraLinks={[
+            { to: "/reset", label: "Forgot Password?" },
+            { to: "/register", label: "Don't have an account? Sign Up" },
+          ]}
         />
       </AuthLayout>
     </div>

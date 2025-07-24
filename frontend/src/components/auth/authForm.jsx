@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Button from "../ui/button";
+import { Link } from "react-router-dom";
 
-const AuthForm = ({ fields, onSubmit, buttonLabel, isLoading }) => {
+const AuthForm = ({ fields, onSubmit, buttonLabel, isLoading, extraLinks }) => {
   const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   return (
@@ -45,6 +46,15 @@ const AuthForm = ({ fields, onSubmit, buttonLabel, isLoading }) => {
           {isLoading ? "Proccessing..." : buttonLabel}
         </Button>
       </div>
+      {extraLinks && (
+        <div className="flex justify-between text-sm mt-4">
+          {extraLinks.map(({ to, label }) => (
+            <Link key={to} to={to} className="text-[#fff] hover:underline">
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
     </form>
   );
 };
