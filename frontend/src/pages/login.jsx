@@ -45,11 +45,11 @@ const Login = () => {
         }
       );
       if (!res.ok) {
-        alert(`Registration failed`);
+        alert(`login failed`);
         return;
       }
       const result = await res.json();
-      alert("Registration successful!", result);
+      alert("login successful!", result);
       navigate("/");
     } catch (error) {
       alert(`Network error: ${error.message}`);

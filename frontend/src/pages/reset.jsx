@@ -37,7 +37,7 @@ const Reset = () => {
 
       if (!res.ok) {
         const errorData = await res.json();
-        alert(`Registration failed: ${errorData.message || res.statusText}`);
+        alert(`reset failed: ${errorData.message || res.statusText}`);
         return;
       }
 
